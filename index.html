@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+</head>
+<body>
+    <header>
+        <h1>Responsive Images</h1>
+    </header>
+    <main>
+
+        <section>
+            <h2>Same image different size</h2>
+            <img srcset="https://placehold.co/320x320 320w,
+            https://placehold.co/640x400 640w,
+            https://placehold.co/1024x600 1024w" 
+            sizes="
+            (max-width: 320px) 320px,
+            (max-width: 640px) 640px
+            (max-width: 1024px) 1024px" 
+            src="https://placehold.co/600x400" 
+            alt="placehold">
+        </section>
+        <section>
+            <h2>Same image different resolution</h2>
+            <img srcset="https://placehold.co/320,
+            https://placehold.co/640 2x,
+            https://placehold.co/960 3x"
+
+            src="https://placehold.co/600x400"
+            
+            alt="placehold">
+        </section>
+        <section>
+            <h2>Art Direction</h2>
+            <picture>
+                <source srcset="./images/fall-dog-1200.jpg, 
+                ./images/fall-dog-2400.jpg 2x,
+                ./images/fall-dog-3600.jpg 3x" 
+                media="(min-width: 900px)">
+
+                <source srcset="./images/fall-dog-900.jpg"
+                media="(min-width: 640px)"> 
+
+                <source srcset="./images/fall-dog-640.jpg" 
+                media="(min-width: 320px)"> 
+
+                <img src="./images/fall-dog-900.jpg" alt="dog sitting on a sofa"> 
+            </picture>
+        </section>
+
+    </main>
+    
+</body>
+</html>
